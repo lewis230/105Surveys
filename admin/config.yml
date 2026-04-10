@@ -1,7 +1,7 @@
 backend:
-  name: github
-  repo: YOUR_GITHUB_USERNAME/105surveys
+  name: git-gateway
   branch: main
+  site_id: c35db212-bfc1-4779-ab80-e4094d84ff59
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
