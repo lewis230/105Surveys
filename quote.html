@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Get a Quote | 105 Surveys North West</title>
+  <meta name="description" content="Get an instant quote for measured building surveys, topographical surveys, utility detection and setting out across Liverpool and the North West."/>
+  <link rel="canonical" href="https://www.105surveys.com/quote.html"/>
+  <link rel="icon" href="favicon.png" type="image/png"/>
+  <link rel="apple-touch-icon" href="favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+<style>
+@media (max-width: 768px) {
+  .quote-grid { grid-template-columns: 1fr !important; }
+  .quote-grid > div:last-child { order: -1; }
+}
+</style>
+</head>
+<body><nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69ab25d80e717c887fab0b30/c575fd8bf_105DEVELOPMENTS500x300px2.png" alt="105 Surveys" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-btn">Services ▾</button>
+        <div class="nav-dropdown-menu" id="servicesMenu">
+          <div class="nav-dropdown-menu-inner">
+            <a href="measured-building-surveys.html">Measured Building Surveys</a>
+            <a href="topographical-surveys.html">Topographical Surveys</a>
+            <a href="utility-surveys.html">Utility Services</a>
+            <a href="setting-out.html">Setting Out</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="quote.html" class="btn-nav nav-cta">Get a Quote</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="measured-building-surveys.html">Measured Building Surveys</a>
+    <a href="topographical-surveys.html">Topographical Surveys</a>
+    <a href="utility-surveys.html">Utility Services</a>
+    <a href="setting-out.html">Setting Out</a>
+    <a href="insights.html">Insights</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="quote.html" class="btn-red">Get a Quote</a>
+  </div>
+</nav>
+
+<!-- Dark hero -->
+<div style="background:#111111;padding:8rem 3rem 4rem;">
+  <div style="max-width:1280px;margin:0 auto;">
+    <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);">Free Quote</span>
+    <h1 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:white;margin-top:0.5rem;margin-bottom:0.75rem;">Get an Instant Quote</h1>
+    <p style="color:rgba(255,255,255,0.55);font-size:1rem;max-width:520px;">Fill in the details below and we'll provide a tailored quote for your project.</p>
+  </div>
+</div>
+
+<!-- Hidden Netlify forms for both steps -->
+<form name="quote-step1" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="quote-step1"/>
+  <input type="text" name="first_name"/>
+  <input type="text" name="last_name"/>
+  <input type="email" name="email"/>
+  <input type="tel" name="phone"/>
+</form>
+<form name="quote-full" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="quote-full"/>
+  <input type="text" name="first_name"/>
+  <input type="text" name="last_name"/>
+  <input type="email" name="email"/>
+  <input type="tel" name="phone"/>
+  <input type="text" name="services"/>
+  <input type="text" name="address"/>
+  <input type="text" name="timeframe"/>
+  <input type="file" name="files"/>
+</form>
+
+<section style="background:var(--bg-light);">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:3fr 2fr;gap:3rem;align-items:start;" class="quote-grid">
+
+      <!-- LEFT: Dark form card -->
+      <div>
+
+        <!-- STEP 1 -->
+        <div id="step1" style="background:#1a1a1a;border-radius:16px;padding:2.5rem;">
+          <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:1.75rem;text-align:center;">Receive a Quote Now</p>
+          <form id="step1Form">
+            <input name="bot-field" style="display:none"/>
+            <div class="form-group" style="margin-bottom:1rem;">
+              <input type="text" id="s1fname" placeholder="First Name (Required)" required style="background:#262626;border:1px solid #333;color:white;border-radius:8px;padding:1rem;width:100%;font-family:Inter,sans-serif;font-size:0.9rem;outline:none;"/>
+            </div>
+            <div class="form-group" style="margin-bottom:1rem;">
+              <input type="text" id="s1lname" placeholder="Last Name (Required)" required style="background:#262626;border:1px solid #333;color:white;border-radius:8px;padding:1rem;width:100%;font-family:Inter,sans-serif;font-size:0.9rem;outline:none;"/>
+            </div>
+            <div class="form-group" style="margin-bottom:1rem;">
+              <input type="email" id="s1email" placeholder="Email Address (Required)" required style="background:#262626;border:1px solid #333;color:white;border-radius:8px;padding:1rem;width:100%;font-family:Inter,sans-serif;font-size:0.9rem;outline:none;"/>
+            </div>
+            <div class="form-group" style="margin-bottom:1.5rem;">
+              <input type="tel" id="s1phone" placeholder="Telephone (Required)" required style="background:#262626;border:1px solid #333;color:white;border-radius:8px;padding:1rem;width:100%;font-family:Inter,sans-serif;font-size:0.9rem;outline:none;"/>
+            </div>
+            <label style="display:flex;align-items:flex-start;gap:0.75rem;color:rgba(255,255,255,0.55);font-size:0.8rem;line-height:1.55;margin-bottom:1.5rem;cursor:pointer;">
+              <input type="checkbox" id="s1privacy" required style="accent-color:var(--red);margin-top:2px;flex-shrink:0;width:16px;height:16px;"/>
+              We will process your information in accordance with our privacy practices. Please confirm you have read and agreed to our <a href="privacy.html" style="color:rgba(255,255,255,0.55);margin-left:3px;">privacy policy</a>.
+            </label>
+            <button type="submit" style="width:100%;background:var(--red);color:white;font-weight:700;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;padding:1rem;border:none;border-radius:8px;cursor:pointer;font-family:Inter,sans-serif;transition:background 0.2s;">Instant Quote</button>
+          </form>
+        </div>
+
+        <!-- STEP 2 -->
+        <div id="step2" style="display:none;background:#1a1a1a;border-radius:16px;padding:2.5rem;">
+          <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:1.75rem;text-align:center;">Project Details</p>
+          <form id="step2Form" enctype="multipart/form-data">
+
+            <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">Select Service(s)</p>
+            <div style="margin-bottom:1.5rem;">
+              <label class="service-row"><input type="checkbox" name="services" value="Measured Building Surveys" style="accent-color:var(--red);width:18px;height:18px;flex-shrink:0;"/><span>Measured Building Surveys</span></label>
+              <label class="service-row"><input type="checkbox" name="services" value="Topographical Surveys" style="accent-color:var(--red);width:18px;height:18px;flex-shrink:0;"/><span>Topographical Surveys</span></label>
+              <label class="service-row"><input type="checkbox" name="services" value="Utility Services" style="accent-color:var(--red);width:18px;height:18px;flex-shrink:0;"/><span>Utility Services</span></label>
+              <label class="service-row"><input type="checkbox" name="services" value="Setting Out" style="accent-color:var(--red);width:18px;height:18px;flex-shrink:0;"/><span>Setting Out</span></label>
+            </div>
+
+            <div style="margin-bottom:1.5rem;">
+              <input type="text" id="s2address" placeholder="Property Address (Required)" required style="background:#262626;border:1px solid #333;color:white;border-radius:8px;padding:1rem;width:100%;font-family:Inter,sans-serif;font-size:0.9rem;outline:none;"/>
+            </div>
+
+            <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">Required Timeframe</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem;margin-bottom:1.5rem;" id="timeframeGroup">
+              <button type="button" class="tf-btn" data-val="5 Days" onclick="selectTimeframe(this)">5 Days</button>
+              <button type="button" class="tf-btn" data-val="10 Days" onclick="selectTimeframe(this)">10 Days</button>
+              <button type="button" class="tf-btn" data-val="Relaxed" onclick="selectTimeframe(this)">Relaxed</button>
+            </div>
+            <input type="hidden" id="s2timeframe" value=""/>
+
+            <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;">Attach Files (Optional)</p>
+            <div style="margin-bottom:1.5rem;">
+              <label style="display:block;background:#262626;border:1px solid #333;border-radius:8px;padding:1rem;color:rgba(255,255,255,0.4);font-size:0.9rem;cursor:pointer;text-align:center;">
+                <input type="file" id="s2files" name="files" multiple accept=".pdf,.jpg,.jpeg,.png" style="display:none;" onchange="updateFileLabel(this)"/>
+                <span id="fileLabel">Upload images or PDFs...</span>
+              </label>
+            </div>
+
+            <button type="submit" style="width:100%;background:var(--red);color:white;font-weight:700;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;padding:1rem;border:none;border-radius:8px;cursor:pointer;font-family:Inter,sans-serif;transition:background 0.2s;margin-bottom:1rem;">Instant Quote</button>
+            <p style="text-align:center;"><button type="button" onclick="goBack()" style="background:none;border:none;color:rgba(255,255,255,0.35);font-size:0.8rem;cursor:pointer;font-family:Inter,sans-serif;">← Back to contact details</button></p>
+          </form>
+        </div>
+
+        <!-- SUCCESS -->
+        <div id="quoteSuccess" style="display:none;background:#1a1a1a;border-radius:16px;padding:3rem 2.5rem;text-align:center;">
+          <div style="width:64px;height:64px;background:rgba(185,28,28,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
+            <svg width="28" height="28" fill="none" stroke="var(--red)" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 style="font-size:1.25rem;font-weight:700;color:white;margin-bottom:0.5rem;">Quote Request Received!</h3>
+          <p style="color:rgba(255,255,255,0.5);font-size:0.875rem;">We'll get back to you within 24 hours with a tailored quote.</p>
+          <a href="index.html" style="display:inline-block;margin-top:1.5rem;color:var(--red);font-size:0.85rem;font-weight:600;text-decoration:none;">← Back to Home</a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Why get a quote -->
+      <div>
+        <h2 style="font-size:1.3rem;font-weight:800;margin-bottom:0.75rem;">Why Get a Quote?</h2>
+        <p style="color:var(--text-muted);font-size:0.875rem;line-height:1.7;margin-bottom:1.75rem;">Every project is unique. We provide tailored quotes based on your specific requirements, property size and level of detail needed.</p>
+
+        <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:1.75rem;">
+          <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:42px;height:42px;background:var(--red-light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" fill="none" stroke="var(--red)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div><p style="font-weight:700;font-size:0.9rem;margin-bottom:0.2rem;">Fast Response</p><p style="color:var(--text-muted);font-size:0.8rem;">Quotes returned within 24 hours, often same day.</p></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:42px;height:42px;background:var(--red-light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" fill="none" stroke="var(--red)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>
+            </div>
+            <div><p style="font-weight:700;font-size:0.9rem;margin-bottom:0.2rem;">Tailored Pricing</p><p style="color:var(--text-muted);font-size:0.8rem;">Tailored price for your project needs.</p></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:42px;height:42px;background:var(--red-light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" fill="none" stroke="var(--red)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div><p style="font-weight:700;font-size:0.9rem;margin-bottom:0.2rem;">No Obligation</p><p style="color:var(--text-muted);font-size:0.8rem;">Free quotes with no commitment required.</p></div>
+          </div>
+        </div>
+
+        <div style="background:#111111;border-radius:14px;padding:1.5rem;">
+          <p style="font-weight:700;color:white;margin-bottom:0.35rem;">Prefer to call?</p>
+          <p style="color:rgba(255,255,255,0.45);font-size:0.85rem;margin-bottom:0.75rem;">Speak directly to our survey team.</p>
+          <a href="tel:01512723479" style="font-size:1.25rem;font-weight:800;color:var(--red);text-decoration:none;">0151 272 3479</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69ab25d80e717c887fab0b30/7201450be_105DEVELOPMENTS.png" alt="105 Surveys" />
+        <p>Professional surveying services delivering pinpoint accuracy and fast turnarounds across the UK.</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="measured-building-surveys.html">Measured Building Surveys</a></li>
+        <li><a href="topographical-surveys.html">Topographical Surveys</a></li>
+        <li><a href="utility-surveys.html">Utility Services</a></li>
+        <li><a href="setting-out.html">Setting Out</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="quote.html">Get a Quote</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 10.5 19.79 19.79 0 011.62 2 2 2 0 013.61 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 7.91a16 16 0 006.22 6.22l.97-.97a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:01512723479">0151 272 3479</a></div>
+        <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="info@105surveys.com">info@105surveys.com</a></div>
+        <div class="footer-contact-row"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Liverpool, North West</span></div>
+      </div>
+    </div>
+    <p class="footer-coverage">Covering Liverpool, Manchester, Chester, Warrington, Wigan, Southport, Preston, Blackburn and the wider North West.</p>
+    <div class="footer-bottom">
+      <p>&copy; 2025 105 Surveys. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+<script>
+  const n=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>n.classList.toggle('scrolled',scrollY>20));
+  document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('open'));
+  const _db=document.querySelector('.nav-dropdown-btn'),_dm=document.getElementById('servicesMenu');
+  let _ct;
+  function _om(){clearTimeout(_ct);_dm.classList.add('open');}
+  function _cm(){_ct=setTimeout(()=>_dm.classList.remove('open'),150);}
+  _db.addEventListener('mouseenter',_om);_db.addEventListener('mouseleave',_cm);
+  _dm.addEventListener('mouseenter',_om);_dm.addEventListener('mouseleave',_cm);
+</script>
+<style>
+  .service-row {
+    display:flex;align-items:center;gap:0.85rem;
+    padding:0.9rem 1rem;border:1px solid #333;border-radius:8px;
+    cursor:pointer;color:white;font-size:0.9rem;font-weight:500;
+    margin-bottom:0.5rem;transition:border-color 0.2s,background 0.2s;
+  }
+  .service-row:hover { border-color:var(--red);background:rgba(185,28,28,0.08); }
+  .tf-btn {
+    background:#262626;border:1px solid #333;color:white;
+    font-weight:700;font-size:0.875rem;padding:0.85rem;
+    border-radius:8px;cursor:pointer;font-family:Inter,sans-serif;
+    transition:border-color 0.2s,background 0.2s;
+  }
+  .tf-btn:hover { border-color:var(--red); }
+  .tf-btn.active { border-color:var(--red);background:rgba(185,28,28,0.15);color:var(--red); }
+</style>
+
+<script>
+  let step1Data = {};
+
+  // Step 1 submit — POST to Netlify immediately then show step 2
+  document.getElementById('step1Form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    step1Data = {
+      first_name: document.getElementById('s1fname').value,
+      last_name:  document.getElementById('s1lname').value,
+      email:      document.getElementById('s1email').value,
+      phone:      document.getElementById('s1phone').value,
+    };
+    // POST step1 data to Netlify — captured even if user drops off before step 2
+    const params = new URLSearchParams();
+    params.append('form-name', 'quote-step1');
+    params.append('first_name', step1Data.first_name);
+    params.append('last_name', step1Data.last_name);
+    params.append('email', step1Data.email);
+    params.append('phone', step1Data.phone);
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: params.toString()
+      });
+    } catch(err) { console.log('Step 1 capture error:', err); }
+    // Reveal step 2
+    document.getElementById('step1').style.display = 'none';
+    document.getElementById('step2').style.display = 'block';
+    window.scrollTo({top: document.getElementById('step2').offsetTop - 100, behavior:'smooth'});
+  });
+
+  // Step 2 submit — send full lead
+  document.getElementById('step2Form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const services = [...document.querySelectorAll('[name="services"]:checked')].map(c=>c.value).join(', ');
+    const address   = document.getElementById('s2address').value;
+    const timeframe = document.getElementById('s2timeframe').value;
+    const payload = {
+      'form-name': 'quote-full',
+      ...step1Data,
+      services, address, timeframe
+    };
+    try {
+      const fd = new FormData();
+      Object.entries(payload).forEach(([k,v]) => fd.append(k,v));
+      const files = document.getElementById('s2files').files;
+      for (let i=0; i<files.length; i++) fd.append('files', files[i]);
+      await fetch('/', { method: 'POST', body: fd });
+    } catch(err) {}
+    document.getElementById('step2').style.display = 'none';
+    document.getElementById('quoteSuccess').style.display = 'block';
+    window.scrollTo({top: 0, behavior:'smooth'});
+  });
+
+  function selectTimeframe(btn) {
+    document.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('s2timeframe').value = btn.dataset.val;
+  }
+
+  function goBack() {
+    document.getElementById('step2').style.display = 'none';
+    document.getElementById('step1').style.display = 'block';
+  }
+
+  function updateFileLabel(input) {
+    const label = document.getElementById('fileLabel');
+    label.textContent = input.files.length > 0
+      ? input.files.length + ' file(s) selected'
+      : 'Upload images or PDFs...';
+  }
+</script>
+</body></html>
