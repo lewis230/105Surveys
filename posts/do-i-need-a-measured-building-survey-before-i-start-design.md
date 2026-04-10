@@ -1,12 +1,17 @@
 ---
 title: "Do I Need a Measured Building Survey Before I Start Design?"
-date: 2026-04-10
-description: "If you're an architect working on an existing building, a measured building survey isn't optional — it's the foundation your design is built from. Here's why."
+slug: do-i-need-a-measured-building-survey-before-i-start-design
+published: true
+published_date: 2026-04-10
+category: Guide
+service: Measured Building Surveys
+summary: "A measured building survey should be the first thing commissioned on any project involving an existing building. Here's why timing matters."
+cover_image: https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69ab25d80e717c887fab0b30/c575fd8bf_105DEVELOPMENTS500x300px2.png
 ---
 
 # Do I Need a Measured Building Survey Before I Start Design?
 
-![Measured building and topographical surveys across the North West | 105 Surveys](/images/hero.jpg)
+![Measured building and topographical surveys across the North West | 105 Surveys](https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69ab25d80e717c887fab0b30/c575fd8bf_105DEVELOPMENTS500x300px2.png)
 
 If you're an architect working on an existing building in the North West, the answer is yes — and the timing matters more than most people realise.
 
@@ -35,7 +40,7 @@ At 105 Surveys, we turn around measured building surveys in as little as one wee
 A standard measured building survey from 105 Surveys includes:
 
 - Floor plans at each level
-- External elevations
+- External elevations (all faces)
 - Cross-sections through the building
 - Ceiling heights and structural features
 - Door and window positions and sizes
