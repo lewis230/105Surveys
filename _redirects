@@ -1,0 +1,3 @@
+# Force all traffic to www
+https://105surveys.com/* https://www.105surveys.com/:splat 301!
+http://105surveys.com/* https://www.105surveys.com/:splat 301!
