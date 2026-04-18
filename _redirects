@@ -1,1 +1,2 @@
-
+# Netlify handles www redirect via domain settings
+# This file intentionally left without redirect rules
