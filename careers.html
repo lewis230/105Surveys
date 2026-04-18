@@ -102,17 +102,17 @@
     .role-card {
       display: block;
       text-decoration: none;
-      background: white;
-      border: 1px solid var(--border);
+      background: var(--red);
+      border: 1px solid var(--red-dark);
       border-radius: 14px;
       padding: 1.4rem 1.6rem;
       margin-bottom: 0.85rem;
-      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
     }
     .role-card:hover {
-      border-color: rgba(185,28,28,0.3);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
-      transform: translateY(-1px);
+      background: var(--red-dark);
+      box-shadow: 0 8px 24px rgba(185,28,28,0.25);
+      transform: translateY(-2px);
     }
     .role-card-top {
       display: flex;
@@ -124,13 +124,13 @@
     .role-title {
       font-size: 1rem;
       font-weight: 700;
-      color: var(--text);
+      color: white;
       line-height: 1.3;
     }
     .role-arrow {
       width: 30px;
       height: 30px;
-      background: var(--red-light);
+      background: rgba(255,255,255,0.2);
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -141,7 +141,7 @@
       width: 14px;
       height: 14px;
       fill: none;
-      stroke: var(--red);
+      stroke: white;
       stroke-width: 2.5;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -154,20 +154,21 @@
     .role-tag {
       font-size: 0.72rem;
       font-weight: 600;
-      color: var(--text-muted);
-      background: var(--bg-light);
-      border: 1px solid var(--border);
+      color: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
       border-radius: 20px;
       padding: 0.2rem 0.75rem;
     }
     .role-tag.highlight {
-      color: var(--red);
-      background: var(--red-light);
-      border-color: rgba(185,28,28,0.2);
+      color: white;
+      background: rgba(255,255,255,0.25);
+      border-color: rgba(255,255,255,0.4);
+      font-weight: 700;
     }
     .role-desc {
       font-size: 0.82rem;
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.75);
       line-height: 1.6;
       margin-top: 0.6rem;
     }
@@ -229,7 +230,7 @@
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="page-hero-bg">
-    <img src="https://media.base44.com/images/public/69ab25d80e717c887fab0b30/51e151e99_AOH_90511.jpg" alt="105 Surveys team on location"/>
+    <img src="img-hero-homepage.webp" alt="105 Surveys team on location"/>
   </div>
   <div class="page-hero-content">
     <span class="page-hero-label">Careers</span>
@@ -316,18 +317,15 @@
       <div class="careers-about">
         <span class="section-label-left">Working at 105 Surveys</span>
         <h2 class="section-title-left">A Place to Build Your Career</h2>
-        <p>At 105 Surveys, we hold ourselves to a high standard — on every project, for every client. The work we deliver sits at the critical early stages of the design and planning process, and we treat it that way. That expectation runs through everything we do.</p>
-        <p>We invest in our people and in how we work. Our surveyors have access to the latest laser scanning and CAD technology, clear processes, and the autonomy to manage projects from start to finish. We're always looking to improve, and we expect the people who join us to bring that same mindset.</p>
-        <p>We're based in Liverpool, with projects across the North West — spanning residential conversions, commercial developments, heritage buildings, and large-scale infrastructure. The work is varied, the clients are demanding, and the standard is consistently high.</p>
+        <p>At 105 Surveys, we hold ourselves to a high standard — on every project, for every client. The work we deliver sits at the critical early stages of the design and planning process.</p>
+        <p>We invest in our people and in how we work. Our surveyors have access to the latest laser scanning and CAD technology, clear processes, and the autonomy to manage projects from start to finish. We're always looking to improve, and we expect the people who join us to bring the same enthusiasm.</p>
+        <p>We're based in Liverpool, with projects across the North West — spanning residential conversions, commercial developments, heritage buildings, and infrastructure projects.</p>
         <ul class="check-list" style="margin-top:1.25rem;">
           <li>Varied project types across the North West</li>
           <li>Latest laser scanning and CAD technology</li>
           <li>Clear processes and full project autonomy</li>
           <li>High standards, demanding clients, rewarding work</li>
         </ul>
-        <div class="careers-about-img">
-          <img src="https://media.base44.com/images/public/69ab25d80e717c887fab0b30/51e151e99_AOH_90511.jpg" alt="105 Surveys team at work"/>
-        </div>
       </div>
 
       <!-- RIGHT: Roles Available -->
