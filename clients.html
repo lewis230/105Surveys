@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>105 Surveys — North West Surveyors</title>
+<meta name="description" content="Measured building surveys, topographical surveys and utility surveys across the North West. Brief confirmed before site. Delivered when agreed.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0a0a0a;
+    --paper: #ffffff;
+    --muted: rgba(10,10,10,0.5);
+    --rule: rgba(10,10,10,0.08);
+    --accent: #CC0000;
+    --accent-soft: #FFF5F5;
+    --sans: 'Inter', -apple-system, system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 17px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 32px 120px;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .logo span { color: var(--accent); }
+
+  section { padding: 44px 0; }
+
+  h1 {
+    font-size: clamp(34px, 5.5vw, 54px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+  h2 {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  p {
+    font-size: clamp(16px, 1.1vw, 18px);
+    line-height: 1.65;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  p:last-child { margin-bottom: 0; }
+
+  .hero-sub {
+    font-size: clamp(17px, 1.3vw, 21px);
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .accent { color: var(--accent); }
+
+  .divider {
+    height: 1px;
+    background: var(--rule);
+    border: 0;
+    margin: 0;
+  }
+
+  /* Letter */
+  .letter-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .letter-card {
+    background: #F5EDE0;
+    border: 1px solid rgba(10,10,10,0.07);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 2px 24px rgba(10,10,10,0.04);
+  }
+  .letter-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid rgba(10,10,10,0.08);
+  }
+  .letter-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+  }
+  .letter-meta { flex: 1; }
+  .letter-from { font-weight: 600; font-size: 15px; letter-spacing: -0.01em; }
+  .letter-title { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .letter-date { font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
+  .letter-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .letter-body p:last-of-type { margin-bottom: 32px; }
+  .letter-sign-name { font-size: 19px; font-weight: 600; letter-spacing: -0.01em; }
+  .letter-sign-role { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  /* UVP */
+  .uvp {
+    font-size: clamp(20px, 2.8vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .uvp-hl {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* Proof grid */
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .proof-item {
+    padding: 24px;
+    border: 1px solid rgba(10,10,10,0.08);
+    border-radius: 14px;
+    background: #FAFAF8;
+  }
+  .proof-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .proof-headline {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .proof-body {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* Case study */
+  .case-study {
+    background: var(--paper);
+    border: 1px solid rgba(10,10,10,0.08);
+    border-radius: 16px;
+    padding: 40px;
+  }
+  .case-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .case-study p {
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+  .case-study p:last-of-type { margin-bottom: 0; }
+  .case-result {
+    display: flex;
+    gap: 0;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(10,10,10,0.08);
+  }
+  .case-stat {
+    flex: 1;
+    text-align: center;
+    padding: 0 12px;
+    border-right: 1px solid rgba(10,10,10,0.08);
+  }
+  .case-stat:first-child { padding-left: 0; }
+  .case-stat:last-child { padding-right: 0; border-right: none; }
+  .case-stat-num {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  .case-stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  /* Case study tabs */
+  .case-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 28px 0 0;
+    border-bottom: 1px solid rgba(10,10,10,0.08);
+    padding-bottom: 0;
+  }
+  .case-tab {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    background: none;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.2s, border-color 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .case-tab:hover { color: var(--ink); }
+  .case-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .case-tab-content { margin-top: 0; }
+  .case-tab-panel { display: none; }
+  .case-tab-panel.active { display: block; }
+  .case-img-wrap {
+    position: relative;
+    margin-top: 20px;
+  }
+  .case-img-placeholder {
+    width: 100%;
+    aspect-ratio: 3/2;
+    background: #F5F3EE;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(10,10,10,0.15);
+    transition: height 0.4s ease;
+  }
+  .case-img-placeholder span {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .case-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+  }
+
+  /* Testimonial */
+  .testimonial {
+    background: var(--accent-soft);
+    border-radius: 14px;
+    padding: 32px 36px;
+  }
+  .testimonial-quote {
+    font-size: 17px;
+    line-height: 1.65;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .testimonial-attribution {
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  /* CTA */
+  .cta-section { text-align: center; }
+  .cta-lead {
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 36px;
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .form-full { grid-column: 1 / -1; }
+  input, textarea {
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 15px;
+    padding: 13px 16px;
+    border: 1px solid rgba(10,10,10,0.15);
+    border-radius: 10px;
+    background: var(--paper);
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  input:focus, textarea:focus { border-color: var(--ink); }
+  input::placeholder, textarea::placeholder { color: rgba(10,10,10,0.35); }
+  textarea { resize: none; height: 88px; }
+  .submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--ink);
+    color: white;
+    border: none;
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 36px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s, transform 0.15s;
+    letter-spacing: 0.01em;
+  }
+  .submit-btn:hover { background: #222; transform: translateY(-1px); }
+  .form-note {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 18px;
+  }
+  .form-note a { color: var(--ink); font-weight: 500; text-decoration: none; }
+
+  footer {
+    padding-top: 40px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+  }
+  footer p { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  footer a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: var(--ink); }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 36px 20px 80px; }
+    header { margin-bottom: 44px; }
+    section { padding: 32px 0; }
+    h1 { font-size: clamp(30px, 9vw, 42px); }
+    .letter-card { padding: 28px 22px; }
+    .letter-head { flex-wrap: wrap; gap: 10px; }
+    .letter-date { width: 100%; text-align: left; }
+    .case-study { padding: 28px 22px; }
+    .case-result { flex-direction: column; gap: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .case-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 0 20px; }
+    .case-stat:last-child { border-bottom: none; padding-bottom: 0; }
+    .proof-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .testimonial { padding: 28px 24px; }
+  }
+
+  @media (max-width: 380px) {
+    .wrap { padding: 28px 18px 64px; }
+    h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <a href="https://www.105surveys.com" class="logo" target="_self">
+      <img src="105-logo.png" alt="105 Surveys" style="height:100px;width:auto;display:block;">
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section>
+    <h1>Helping you shape spaces <span class="accent">people love.</span></h1>
+    <p class="hero-sub">So your project starts on solid ground.</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- INTRO -->
+  <section>
+    <p>There is a lot of coordination behind getting a project through planning. A big part of that is putting together the right level of information to properly support a scheme, particularly when applications are being scrutinised and every detail is being looked at.</p>
+    <p>105 Surveys works alongside architects and planning consultants across the North West on measured building surveys, topographical surveys and utility surveys.</p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- UVP -->
+  <section style="text-align:center;padding:48px 0;">
+    <p class="uvp">We exist to make sure the surveys supporting your schemes are accurate, complete, and there when<br><em class="uvp-hl">your project needs them.</em></p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- PROOF GRID -->
+  <section>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <div class="proof-label">Speed</div>
+        <div class="proof-headline">As little<br>as one week</div>
+        <p class="proof-body">Survey turnaround from instruction to delivery. Your programme keeps moving from day one.</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-label">Accuracy</div>
+        <div class="proof-headline">Brief confirmed<br>before site</div>
+        <p class="proof-body">Scope, format and level of detail agreed before the team goes to site. Files delivered right, first time.</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-label">Reliability</div>
+        <div class="proof-headline">Delivered<br>when agreed</div>
+        <p class="proof-body">We commit to a delivery date at instruction. It lands when we said it would.</p>
+      </div>
+      <div class="proof-item">
+        <div class="proof-label">Communication</div>
+        <div class="proof-headline">Same day<br>response</div>
+        <p class="proof-body">Questions answered, changes flagged. No chasing. You always know where things stand.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- CASE STUDY -->
+  <section>
+    <div class="case-study">
+      <div class="case-eyebrow">Case study</div>
+      <p>The architects and heritage consultants needed accurate existing drawings before design could begin on a Grade II listed Georgian property.</p>
+      <p>We carried out a high resolution laser scanning survey covering internal floor plans, external elevations, roof plan, sections, wall thicknesses, door and window positions, ground levels and topographical data. Everything the design team needed to work from with confidence.</p>
+
+      <!-- Tabs -->
+      <div class="case-tabs">
+        <button class="case-tab active" onclick="switchTab(this,'tab-floorplan')">Floor Plans</button>
+        <button class="case-tab" onclick="switchTab(this,'tab-sections')">Sections</button>
+        <button class="case-tab" onclick="switchTab(this,'tab-elevations')">Elevations</button>
+      </div>
+      <div class="case-tab-content">
+        <div id="tab-floorplan" class="case-tab-panel active">
+          <img src="floorplans.jpg" alt="Floor plans" class="case-img-placeholder" style="object-fit:contain;background:#F5F3EE;">
+        </div>
+        <div id="tab-sections" class="case-tab-panel">
+          <img src="sections.jpg" alt="Sections" class="case-img-placeholder" style="object-fit:contain;background:#F5F3EE;">
+        </div>
+        <div id="tab-elevations" class="case-tab-panel">
+          <img src="elevations.jpg" alt="Elevations" class="case-img-placeholder" style="object-fit:contain;background:#F5F3EE;">
+        </div>
+      </div>
+
+      <div class="case-result">
+        <div class="case-stat">
+          <span class="case-stat-num">3 weeks</span>
+          <div class="case-stat-label">Instruction to delivery</div>
+        </div>
+        <div class="case-stat">
+          <span class="case-stat-num">Grade II</span>
+          <div class="case-stat-label">Listed Georgian property</div>
+        </div>
+        <div class="case-stat">
+          <span class="case-stat-num">Approved</span>
+          <div class="case-stat-label">Listed building consent and planning</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section style="padding-top: 0;">
+    <div class="testimonial">
+      <p class="testimonial-quote">"We're always keen to get 105 Surveys involved early in the project lifecycle. The earlier they're instructed, the better we can assess the design scope and understand what's truly achievable from the building."</p>
+      <div class="testimonial-attribution">— Andrew, SBG LLP</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- FOUNDER NOTE -->
+  <section>
+    <p class="letter-eyebrow">A note from Lewis</p>
+    <div class="letter-card">
+      <div class="letter-head">
+        <div class="letter-avatar" style="padding:0;overflow:hidden;"><img src="lewis-photo.jpg" alt="Lewis Laycock" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="letter-meta">
+          <div class="letter-from">Lewis Laycock</div>
+          <div class="letter-title">Director, 105 Surveys</div>
+        </div>
+        <div class="letter-date">2026</div>
+      </div>
+      <div class="letter-body">
+        <p>Alongside 105 Surveys, I carry out my own developments. I have been on the instructing side of surveys, as the client, waiting on a survey to be returned after the agreed timeframe, missing details and site features, all whilst the project sits still and finance costs add up.</p>
+        <p>That experience shapes how we work. Before we go to site, we confirm exactly what the project needs: the format, the scope, the level of detail. Capturing everything in one visit.</p>
+        <p>We have worked on a range of schemes across the North West, from residential conversions to listed building works and new build housing. Should any projects be coming up that require a survey to progress design or planning, it would be great to look at it together and make sure your project is properly supported from instruction to delivery.</p>
+      </div>
+      <div>
+        <div class="letter-sign-name">Lewis Laycock</div>
+        <div class="letter-sign-role">Director, 105 Surveys</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Tell us about your next project.</h2>
+    <p class="cta-lead">We'll come back to you the same day.</p>
+    <form id="enquiry-form" name="project-enquiry" data-netlify="true">
+      <input type="hidden" name="form-name" value="project-enquiry">
+      <div class="form-grid">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="company" placeholder="Company" required>
+        <input type="email" name="email" placeholder="Email" required class="form-full">
+        <textarea name="project" placeholder="Tell us about your project" class="form-full" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send enquiry &rarr;</button>
+    </form>
+    <p class="form-note">Or call us on <a href="tel:01512723479">0151 272 3479</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p style="font-weight:600;color:var(--ink);margin-bottom:10px;">105 Surveys</p>
+    <p><a href="tel:01512723479">0151 272 3479</a> &middot; <a href="mailto:info@105surveys.com">info@105surveys.com</a> &middot; <a href="https://www.105surveys.com" target="_blank" rel="noopener">www.105surveys.com</a></p>
+  </footer>
+
+</div>
+
+<script>
+  function switchTab(btn, panelId) {
+    document.querySelectorAll('.case-tab').forEach(function(t) { t.className = 'case-tab'; });
+    document.querySelectorAll('.case-tab-panel').forEach(function(p) { p.className = 'case-tab-panel'; });
+    btn.className = 'case-tab active';
+    document.getElementById(panelId).className = 'case-tab-panel active';
+  }
+</script>
+
+</body>
+</html>
