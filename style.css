@@ -1,6 +1,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root { --red: #b91c1c; --red-dark: #991b1b; --red-light: rgba(185,28,28,0.08); --text: #111827; --text-muted: #6b7280; --bg: #ffffff; --bg-light: #f8f9fa; --border: #e5e7eb; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
 /* NAV */
@@ -60,6 +60,7 @@ nav.scrolled .hamburger span { background: var(--text); }
 
 /* BENEFITS GRID */
 .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+@media (max-width: 768px) { .benefits-grid { grid-template-columns: 1fr; } }
 .benefit-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; transition: border-color 0.2s, box-shadow 0.2s; }
 .benefit-card:hover { border-color: rgba(185,28,28,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
 .benefit-icon { width: 44px; height: 44px; background: var(--red-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
@@ -72,6 +73,7 @@ nav.scrolled .hamburger span { background: var(--text); }
 .feature-item { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.4rem; }
 .feature-item h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem; }
 .feature-item p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; }
+@media (max-width: 900px) { .features-grid { grid-template-columns: 1fr; } }
 
 /* SPLIT LAYOUT */
 .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
@@ -214,7 +216,7 @@ footer { background: #111111; padding: 4rem 3rem 2rem; }
 .process-section .section-subtitle { color: rgba(255,255,255,0.45); }
 .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2.5rem; margin-top: 3rem; }
 @media (max-width: 900px) { .process-grid { grid-template-columns: 1fr 1fr; } .process-section { padding: 3.5rem 1.5rem; } }
-@media (max-width: 540px) { .process-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .process-grid { grid-template-columns: 1fr; } }
 .process-step { position: relative; }
 .step-num { font-size: 4.5rem; font-weight: 800; color: rgba(255,255,255,0.04); line-height: 1; position: absolute; top: -8px; left: -2px; }
 .step-icon-wrap { position: relative; width: 48px; height: 48px; background: rgba(185,28,28,0.2); border: 1px solid rgba(185,28,28,0.35); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; margin-top: 1.75rem; }
